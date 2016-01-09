@@ -8,7 +8,7 @@
     <richard.the21dayfix.ColoredCheckBox
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        custom:CheckBoxColor="seth" />
+        custom:CheckBoxColor="#05AEDF" />
 
 <!--    <include layout="@layout/fragment_box_row" />
     <include layout="@layout/fragment_box_row" />

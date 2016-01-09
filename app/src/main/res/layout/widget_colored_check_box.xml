@@ -7,7 +7,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <CheckBox
-        android:buttonTint="#05AEDF"
+        android:id="@+id/checkbox_one"
         android:scaleX="4"
         android:scaleY="4"
         android:layout_marginLeft="30dp"
