@@ -5,22 +5,22 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <richard.the21dayfix.ColoredCheckBox
+    <richard.the21dayfix.ColoredCheckBoxList
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         custom:CheckBoxColor="#05AEDF" />
 
-    <richard.the21dayfix.ColoredCheckBox
+    <richard.the21dayfix.ColoredCheckBoxList
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         custom:CheckBoxColor="#33cc33" />
 
-    <richard.the21dayfix.ColoredCheckBox
+    <richard.the21dayfix.ColoredCheckBoxList
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         custom:CheckBoxColor="#ff0000" />
 
-    <richard.the21dayfix.ColoredCheckBox
+    <richard.the21dayfix.ColoredCheckBoxList
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         custom:CheckBoxColor="#ff9900" />

@@ -9,9 +9,9 @@ import android.view.LayoutInflater;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
 
-public class ColoredCheckBox extends LinearLayout {
+public class ColoredCheckBoxList extends LinearLayout {
 
-    public ColoredCheckBox(Context context, AttributeSet attrs)
+    public ColoredCheckBoxList(Context context, AttributeSet attrs)
     {
         super(context, attrs);
         inflate(context);
@@ -22,7 +22,7 @@ public class ColoredCheckBox extends LinearLayout {
     private void inflate(Context context)
     {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        inflater.inflate(R.layout.widget_colored_check_box, this);
+        inflater.inflate(R.layout.widget_colored_check_box_list, this);
     }
 
     private String getColor(Context context, AttributeSet attrs) {
