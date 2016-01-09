@@ -5,6 +5,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
+    <richard.the21dayfix.CustomNumberPicker
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
     <richard.the21dayfix.ColoredCheckBoxList
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -24,5 +28,4 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         custom:CheckBoxColor="#ff9900" />
-
 </LinearLayout>
