@@ -32,6 +32,9 @@ public class ColoredCheckBox extends LinearLayout {
 
     private void applyColors(String color) {
         applyColor(R.id.checkbox_one, color);
+        applyColor(R.id.checkbox_two, color);
+        applyColor(R.id.checkbox_three, color);
+        applyColor(R.id.checkbox_four, color);
     }
 
     private void applyColor(Integer id, String color) {
