@@ -6,47 +6,24 @@
     android:padding="15dp"
     xmlns:android="http://schemas.android.com/apk/res/android" >
 
-    <CheckBox
+    <richard.the21dayfix.ColoredCheckBox
         android:id="@+id/checkbox_one"
-        android:scaleX="4"
-        android:scaleY="4"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <CheckBox
+    <richard.the21dayfix.ColoredCheckBox
         android:id="@+id/checkbox_two"
-        android:scaleX="4"
-        android:scaleY="4"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <CheckBox
+    <richard.the21dayfix.ColoredCheckBox
         android:id="@+id/checkbox_three"
-        android:scaleX="4"
-        android:scaleY="4"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <CheckBox
+    <richard.the21dayfix.ColoredCheckBox
         android:id="@+id/checkbox_four"
-        android:scaleX="4"
-        android:scaleY="4"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
 </LinearLayout>

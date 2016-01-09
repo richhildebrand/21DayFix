@@ -1,12 +1,10 @@
 package richard.the21dayfix;
 
 import android.content.Context;
-import android.content.res.ColorStateList;
+import android.content.res.Resources;
 import android.content.res.TypedArray;
-import android.graphics.Color;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
-import android.widget.CheckBox;
 import android.widget.LinearLayout;
 
 public class ColoredCheckBoxList extends LinearLayout {
@@ -15,8 +13,8 @@ public class ColoredCheckBoxList extends LinearLayout {
     {
         super(context, attrs);
         inflate(context);
-        String checkBoxColor = getColor(context, attrs);
-        applyColors(checkBoxColor);
+        String color = getColor(context, attrs);
+        setColors(color);
     }
 
     private void inflate(Context context)
@@ -30,16 +28,16 @@ public class ColoredCheckBoxList extends LinearLayout {
         return coloredCheckBoxAttributes.getString(R.styleable.ColoredCheckBoxElement_CheckBoxColor);
     }
 
-    private void applyColors(String color) {
-        applyColor(R.id.checkbox_one, color);
-        applyColor(R.id.checkbox_two, color);
-        applyColor(R.id.checkbox_three, color);
-        applyColor(R.id.checkbox_four, color);
+    private void setColors(String color) {
+        setColor(R.id.checkbox_one, color);
+        setColor(R.id.checkbox_two, color);
+        setColor(R.id.checkbox_three, color);
+        setColor(R.id.checkbox_four, color);
     }
 
-    private void applyColor(Integer id, String color) {
-        CheckBox checkBoxOne = (CheckBox) findViewById(id);
-        int textColor = Color.parseColor(color);
-        checkBoxOne.setButtonTintList(ColorStateList.valueOf(textColor));
+    private void setColor(Integer id, String color) {
+        ColoredCheckBox coloredCheckBox = (ColoredCheckBox) findViewById(id);
+        coloredCheckBox.setCheckBoxColor(color);
     }
+
 }
