@@ -13,7 +13,8 @@ public class ColoredCheckBoxList extends LinearLayout {
         super(context, attrs);
         inflate(context);
         String color = getColor(context, attrs);
-        setColors(color);
+        Integer numberOfCheckBoxes = getNumberOfCheckBoxes(context, attrs);
+        setColors(color, numberOfCheckBoxes, context);
     }
 
     private void inflate(Context context)
@@ -27,11 +28,19 @@ public class ColoredCheckBoxList extends LinearLayout {
         return coloredCheckBoxAttributes.getString(R.styleable.ColoredCheckBoxElement_CheckBoxColor);
     }
 
-    private void setColors(String color) {
-        setColor(R.id.checkbox_one, color);
-        setColor(R.id.checkbox_two, color);
-        setColor(R.id.checkbox_three, color);
-        setColor(R.id.checkbox_four, color);
+    private Integer getNumberOfCheckBoxes(Context context, AttributeSet attrs) {
+        TypedArray coloredCheckBoxAttributes = context.getTheme().obtainStyledAttributes(attrs, R.styleable.ColoredCheckBoxElement, 0, 0);
+        return coloredCheckBoxAttributes.getInteger(R.styleable.ColoredCheckBoxElement_CheckBoxCount, 0);
+    }
+
+    private void setColors(String color, Integer numberOfCheckBoxes, Context context) {
+        for (int i = 1; i<= numberOfCheckBoxes; i++)
+        {
+            LinearLayout container = (LinearLayout) findViewById(R.id.colored_check_box_list);
+            ColoredCheckBox checkBox = new ColoredCheckBox(context);
+            checkBox.setCheckBoxColor(color);
+            container.addView(checkBox);
+        }
     }
 
     private void setColor(Integer id, String color) {

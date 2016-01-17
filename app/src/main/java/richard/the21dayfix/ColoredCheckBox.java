@@ -12,6 +12,11 @@ public class ColoredCheckBox extends LinearLayout {
 
     public String CheckBoxColor;
 
+    public ColoredCheckBox(Context context) {
+        super(context);
+        inflate(context);
+    }
+
     public ColoredCheckBox(Context context, AttributeSet attrs)
     {
         super(context, attrs);
