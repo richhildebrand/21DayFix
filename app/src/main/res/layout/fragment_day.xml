@@ -17,37 +17,37 @@
         <richard.the21dayfix.ColoredCheckBoxList
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            custom:CheckBoxColor="#05AEDF" />
+            custom:CheckBoxColor="#289A28" />
 
         <richard.the21dayfix.ColoredCheckBoxList
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            custom:CheckBoxColor="#33cc33" />
+            custom:CheckBoxColor="#7131A3" />
 
         <richard.the21dayfix.ColoredCheckBoxList
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            custom:CheckBoxColor="#ff0000" />
+            custom:CheckBoxColor="#FE0000" />
 
         <richard.the21dayfix.ColoredCheckBoxList
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            custom:CheckBoxColor="#ff9900" />
+            custom:CheckBoxColor="#FEFF01" />
 
         <richard.the21dayfix.ColoredCheckBoxList
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            custom:CheckBoxColor="#ff66ff" />
+            custom:CheckBoxColor="#0170C0" />
 
         <richard.the21dayfix.ColoredCheckBoxList
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            custom:CheckBoxColor="#996633" />
+            custom:CheckBoxColor="#E46D07" />
 
         <richard.the21dayfix.ColoredCheckBoxList
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="100dp"
-            custom:CheckBoxColor="#666699" />
+            custom:CheckBoxColor="#828282" />
     </LinearLayout>
 </ScrollView>
