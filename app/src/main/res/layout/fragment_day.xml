@@ -1,31 +1,53 @@
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:custom="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
 
-    <richard.the21dayfix.CustomNumberPicker
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="match_parent"
+        android:layout_marginBottom="100dp"
+        android:orientation="vertical" >
 
-    <richard.the21dayfix.ColoredCheckBoxList
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        custom:CheckBoxColor="#05AEDF" />
+        <richard.the21dayfix.CustomNumberPicker
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
-    <richard.the21dayfix.ColoredCheckBoxList
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        custom:CheckBoxColor="#33cc33" />
+        <richard.the21dayfix.ColoredCheckBoxList
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            custom:CheckBoxColor="#05AEDF" />
 
-    <richard.the21dayfix.ColoredCheckBoxList
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        custom:CheckBoxColor="#ff0000" />
+        <richard.the21dayfix.ColoredCheckBoxList
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            custom:CheckBoxColor="#33cc33" />
 
-    <richard.the21dayfix.ColoredCheckBoxList
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        custom:CheckBoxColor="#ff9900" />
-</LinearLayout>
+        <richard.the21dayfix.ColoredCheckBoxList
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            custom:CheckBoxColor="#ff0000" />
+
+        <richard.the21dayfix.ColoredCheckBoxList
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            custom:CheckBoxColor="#ff9900" />
+
+        <richard.the21dayfix.ColoredCheckBoxList
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            custom:CheckBoxColor="#ff66ff" />
+
+        <richard.the21dayfix.ColoredCheckBoxList
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            custom:CheckBoxColor="#996633" />
+
+        <richard.the21dayfix.ColoredCheckBoxList
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="100dp"
+            custom:CheckBoxColor="#666699" />
+    </LinearLayout>
+</ScrollView>
