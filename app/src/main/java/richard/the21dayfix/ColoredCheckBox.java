@@ -11,21 +11,27 @@ import android.widget.LinearLayout;
 
 public class ColoredCheckBox extends LinearLayout {
 
+    private CheckBox _checkBox;
+
     public ColoredCheckBox(Context context) {
         super(context);
         inflate(context);
-        CheckBox checkBox = (CheckBox) findViewById(R.id.checkbox);
-        addOnClickListener(checkBox);
+        _checkBox = (CheckBox) findViewById(R.id.checkbox);
+        addOnClickListenerToCheckBox();
     }
 
-    public ColoredCheckBox(Context context, AttributeSet attrs)
-    {
-        super(context, attrs);
-        inflate(context);
+    public void setCheckBoxColor(String colorAsHex) {
+        int colorAsInt = Color.parseColor(colorAsHex);
+        ColorStateList color = ColorStateList.valueOf(colorAsInt);
+        _checkBox.setButtonTintList(color);
     }
 
-    public void setCheckBoxColor(String color) {
-        applyColor(color);
+    public void setCheckBoxTag(String tag) {
+        _checkBox.setTag(tag);
+    }
+
+    public void setCheckBoxState(boolean isChecked) {
+        _checkBox.setChecked(isChecked);
     }
 
     private void inflate(Context context)
@@ -34,25 +40,8 @@ public class ColoredCheckBox extends LinearLayout {
         inflater.inflate(R.layout.widget_colored_check_box, this);
     }
 
-    private void applyColor(String colorAsString) {
-        CheckBox checkBoxOne = (CheckBox) findViewById(R.id.checkbox);
-        int colorAsInt = Color.parseColor(colorAsString);
-        ColorStateList color = ColorStateList.valueOf(colorAsInt);
-        checkBoxOne.setButtonTintList(color);
-    }
-
-    public void setCheckBoxTag(String tag) {
-        CheckBox checkBox = (CheckBox) findViewById(R.id.checkbox);
-        checkBox.setTag(tag);
-    }
-
-    public void setCheckBoxState(boolean isChecked) {
-        CheckBox checkBox = (CheckBox) findViewById(R.id.checkbox);
-        checkBox.setChecked(isChecked);
-    }
-
-    private void addOnClickListener(CheckBox checkBox) {
-        checkBox.setOnClickListener(new View.OnClickListener() {
+    private void addOnClickListenerToCheckBox() {
+        _checkBox.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 CheckBox checkBox = (CheckBox)view;
