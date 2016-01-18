@@ -6,6 +6,8 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.widget.LinearLayout;
 
+import richard.the21dayfix.Repositories.CheckBoxRepository;
+
 public class ColoredCheckBoxList extends LinearLayout {
 
     public ColoredCheckBoxList(Context context, AttributeSet attrs)

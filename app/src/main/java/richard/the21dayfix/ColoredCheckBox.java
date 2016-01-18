@@ -3,11 +3,12 @@ package richard.the21dayfix;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
-import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
+
+import richard.the21dayfix.Repositories.CheckBoxRepository;
 
 public class ColoredCheckBox extends LinearLayout {
 

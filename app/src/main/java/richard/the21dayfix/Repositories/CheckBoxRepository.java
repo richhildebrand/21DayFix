@@ -1,4 +1,4 @@
-package richard.the21dayfix;
+package richard.the21dayfix.Repositories;
 
 import android.content.Context;
 import android.content.SharedPreferences;
