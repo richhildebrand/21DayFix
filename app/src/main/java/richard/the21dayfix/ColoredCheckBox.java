@@ -1,7 +1,6 @@
 package richard.the21dayfix;
 
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.util.AttributeSet;
@@ -11,8 +10,6 @@ import android.widget.CheckBox;
 import android.widget.LinearLayout;
 
 public class ColoredCheckBox extends LinearLayout {
-
-    public String CheckBoxColor;
 
     public ColoredCheckBox(Context context) {
         super(context);
@@ -28,7 +25,6 @@ public class ColoredCheckBox extends LinearLayout {
     }
 
     public void setCheckBoxColor(String color) {
-        CheckBoxColor = color;
         applyColor(color);
     }
 
@@ -55,11 +51,11 @@ public class ColoredCheckBox extends LinearLayout {
         checkBox.setChecked(isChecked);
     }
 
-    private void addOnClickListener(final CheckBox checkBox) {
+    private void addOnClickListener(CheckBox checkBox) {
         checkBox.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                CheckBox checkbox = (CheckBox)view;
+                CheckBox checkBox = (CheckBox)view;
                 CheckBoxRepository checkBoxRepository = new CheckBoxRepository();
                 checkBoxRepository.SaveCheckBoxState(checkBox);
             }
