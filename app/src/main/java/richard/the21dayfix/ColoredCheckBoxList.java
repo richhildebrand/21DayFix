@@ -48,10 +48,4 @@ public class ColoredCheckBoxList extends LinearLayout {
             container.addView(checkBox);
         }
     }
-
-    private void setColor(Integer id, String color) {
-        ColoredCheckBox coloredCheckBox = (ColoredCheckBox) findViewById(id);
-        coloredCheckBox.setCheckBoxColor(color);
-    }
-
 }
