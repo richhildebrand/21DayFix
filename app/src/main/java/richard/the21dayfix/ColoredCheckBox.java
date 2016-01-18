@@ -2,12 +2,12 @@ package richard.the21dayfix;
 
 import android.content.Context;
 import android.content.res.ColorStateList;
-import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
 
+import richard.the21dayfix.Helpers.ColorHelper;
 import richard.the21dayfix.Repositories.CheckBoxRepository;
 
 public class ColoredCheckBox extends LinearLayout {
@@ -22,9 +22,8 @@ public class ColoredCheckBox extends LinearLayout {
     }
 
     public void setCheckBoxColor(String colorAsHex) {
-        int colorAsInt = Color.parseColor(colorAsHex);
-        ColorStateList color = ColorStateList.valueOf(colorAsInt);
-        _checkBox.setButtonTintList(color);
+        ColorStateList colorStateList = ColorHelper.GetColorStateListFromHex(colorAsHex);
+        _checkBox.setButtonTintList(colorStateList);
     }
 
     public void setCheckBoxTag(String tag) {
