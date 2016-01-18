@@ -60,12 +60,10 @@ public class ColoredCheckBox extends LinearLayout {
                 ColorStateList buttonTintList = checkbox.getButtonTintList();
                 String color = buttonTintList.getDefaultColor() + "";
 
-/*                SharedPreferences sp = MyApplication.getInstance().getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
-                SharedPreferences.Editor editor = sp.edit();
-                editor.putInt("level", Level);
-                editor.putInt("myscore", MyScore);
-                editor.putInt("highscore", HighScore);
-                editor.commit();*/
+                SharedPreferences sharedPreferences = checkbox.getContext().getSharedPreferences(color, Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putBoolean(tag, isChecked);
+                editor.commit();
                 String heh = "heh";
             }
         });
