@@ -50,21 +50,18 @@ public class ColoredCheckBox extends LinearLayout {
         checkBox.setTag(tag);
     }
 
-    private void addOnClickListener(CheckBox checkBox) {
+    public void setCheckBoxState(boolean isChecked) {
+        CheckBox checkBox = (CheckBox) findViewById(R.id.checkbox);
+        checkBox.setChecked(isChecked);
+    }
+
+    private void addOnClickListener(final CheckBox checkBox) {
         checkBox.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 CheckBox checkbox = (CheckBox)view;
-                Boolean isChecked = checkbox.isChecked();
-                String tag = checkbox.getTag().toString();
-                ColorStateList buttonTintList = checkbox.getButtonTintList();
-                String color = buttonTintList.getDefaultColor() + "";
-
-                SharedPreferences sharedPreferences = checkbox.getContext().getSharedPreferences(color, Context.MODE_PRIVATE);
-                SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putBoolean(tag, isChecked);
-                editor.commit();
-                String heh = "heh";
+                CheckBoxRepository checkBoxRepository = new CheckBoxRepository();
+                checkBoxRepository.SaveCheckBoxState(checkBox);
             }
         });
     }

@@ -39,7 +39,12 @@ public class ColoredCheckBoxList extends LinearLayout {
             LinearLayout container = (LinearLayout) findViewById(R.id.colored_check_box_list);
             ColoredCheckBox checkBox = new ColoredCheckBox(context);
             checkBox.setCheckBoxColor(color);
-            checkBox.setCheckBoxTag("checkBox_" + i);
+            String tag = "checkBox_" + i;
+            checkBox.setCheckBoxTag(tag);
+
+            CheckBoxRepository checkBoxRepository = new CheckBoxRepository();
+            Boolean isChecked = checkBoxRepository.GetCheckBoxState(color, tag, checkBox.getContext());
+            checkBox.setCheckBoxState(isChecked);
             container.addView(checkBox);
         }
     }
